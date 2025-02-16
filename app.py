@@ -141,5 +141,3 @@ def binary_to_decimal(binary_number):
 def binary_to_octal(binary_number):
     decimal = binary_to_decimal(binary_number)
     return valueof_decimal_to_octal(decimal)
-
-print(binary_to_octal(100))
