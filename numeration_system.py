@@ -144,9 +144,36 @@ def binary_to_octal(binary_number):
     """
     decimal = binary_to_decimal(binary_number)
     return valueof_decimal_to_octal(decimal)
+# Binario para hexadecimal
 def binary_to_hexadecimal(binary_number):
     """
     Write a binary number to convert in hexadecimal.
     """
     decimal = binary_to_decimal(binary_number)
+    return valueof_decimal_to_hexadecimal(decimal)
+# Octal para decimal
+def octal_to_decimal(octal_number):
+    """
+    Write in the parentheses a string of octal number to convert in decimal.
+    """
+    decimal = 0
+    number_list = []
+    for number in str(octal_number).lstrip():
+        number_list.append(number)
+    for number in enumerate(number_list[::-1]):
+        decimal += int(number[1]) * (8 ** number[0])
+    return decimal
+# Octal para binario
+def octal_to_binary(octal_number):
+    """
+    Write in the parentheses a string of octal number to convert in binary.
+    """
+    decimal = octal_to_decimal(octal_number)
+    return valueof_decimal_to_binary(decimal)
+# Octal para hexadecimal
+def octal_to_hexadecimal(octal_number):
+    """
+    Write in the parentheses a string of octal number to convert in hexadecimal.
+    """
+    decimal = octal_to_decimal(octal_number)
     return valueof_decimal_to_hexadecimal(decimal)
