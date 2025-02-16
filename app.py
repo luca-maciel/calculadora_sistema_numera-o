@@ -101,7 +101,6 @@ def valueof_decimal_to_hexadecimal(decimal_number):
     for number in reversed(hexadecimal):
         hexadecimal_number += number
     return hexadecimal_number
-
 # Convertendo fracionario para binario
 def decimal_fractionary_to_binary(fractionary_number=str):
     """
@@ -126,9 +125,11 @@ def decimal_fractionary_to_binary(fractionary_number=str):
         if len(fractionary_number_binario.split(",")[1]) >= 5:
             break
     return fractionary_number_binario
-
 # Binario para decimal
 def binary_to_decimal(binary_number):
+    """
+    Write a binary number to convert in decimal.
+    """
     decimal = 0
     number_list = []
     for number in str(binary_number).lstrip():
@@ -136,8 +137,16 @@ def binary_to_decimal(binary_number):
     for number in enumerate(number_list[::-1]):
         decimal += int(number[1]) * (2 ** number[0])
     return decimal
-
 # Binario para octal
 def binary_to_octal(binary_number):
+    """
+    Write a binary number to convert in octal.
+    """
     decimal = binary_to_decimal(binary_number)
     return valueof_decimal_to_octal(decimal)
+def binary_to_hexadecimal(binary_number):
+    """
+    Write a binary number to convert in hexadecimal.
+    """
+    decimal = binary_to_decimal(binary_number)
+    return valueof_decimal_to_hexadecimal(decimal)
