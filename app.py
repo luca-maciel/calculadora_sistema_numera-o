@@ -127,3 +127,19 @@ def decimal_fractionary_to_binary(fractionary_number=str):
             break
     return fractionary_number_binario
 
+# Binario para decimal
+def binary_to_decimal(binary_number):
+    decimal = 0
+    number_list = []
+    for number in str(binary_number).lstrip():
+        number_list.append(number)
+    for number in enumerate(number_list[::-1]):
+        decimal += int(number[1]) * (2 ** number[0])
+    return decimal
+
+# Binario para octal
+def binary_to_octal(binary_number):
+    decimal = binary_to_decimal(binary_number)
+    return valueof_decimal_to_octal(decimal)
+
+print(binary_to_octal(100))
