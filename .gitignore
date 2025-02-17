@@ -1,0 +1,11 @@
+
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+build/
+.pypirc
+LICENSE
+pyproject.toml
