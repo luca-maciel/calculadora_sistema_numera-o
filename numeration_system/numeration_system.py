@@ -191,4 +191,4 @@ def octal_to_hexadecimal(octal_number):
     Write in the parentheses a string of octal number to convert in hexadecimal.
     """
     decimal = octal_to_decimal(octal_number)
-    return decimal_to_hexadecimal(decimal)
+    return f"{decimal_to_hexadecimal(decimal)}"
