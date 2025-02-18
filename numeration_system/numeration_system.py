@@ -186,7 +186,7 @@ def octal_to_binary(octal_number=int):
         binary += decimal_to_binary(int(letter))
     return f"{int(binary)}"
 # Octal para hexadecimal
-def octal_to_hexadecimal(octal_number):
+def octal_to_hexadecimal(octal_number=int):
     """
     Write in the parentheses a string of octal number to convert in hexadecimal.
     """
