@@ -28,4 +28,15 @@ from numeration_system import *
 number = 256
 
 binary = decimal_to_binary(number, step_by_step=True)
+
+# Output: 
+# 256 ÷ 2 = 128 | remainder = 0
+# 128 ÷ 2 = 64 | remainder = 0
+# 64 ÷ 2 = 32 | remainder = 0
+# 32 ÷ 2 = 16 | remainder = 0
+# 16 ÷ 2 = 8 | remainder = 0
+# 8 ÷ 2 = 4 | remainder = 0
+# 4 ÷ 2 = 2 | remainder = 0
+# 2 ÷ 2 = 1 | remainder = 0
+# 1 ÷ 2 = 0 | remainder = 1
 ```
